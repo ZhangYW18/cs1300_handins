@@ -2,10 +2,11 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Primary Walk-in Clinic</title>
-<!--    <link rel="stylesheet" href="styles.css" />-->
+    <title>CS1300 Assignment 2: Responsive Redesign</title>
+
     <!-- Bootstrap Framework CSS -->
     <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <!-- Page CSS -->
     <link rel="stylesheet" href="styles/ass2.css">
   </head>
 
@@ -16,19 +17,20 @@
 
     <section>
       <h2>Task</h2>
+      <p>
+        Choose an existing webpage, analyze its problems in terms of usability and accessibility, redesign the webpage and implement the redesign in HTML and CSS.
+      </p>
     </section>
 
     <section>
       <h2>Part 1: Identifying Usability Problems</h2>
-      <p>
-        <p>Chosen webpage: Main Page of Primary Walkin Medical Center</p>
+      <p>Chosen webpage: <a href="https://primarywalkinmedical.com/">Main Page of Primary Walkin Medical Center</a></p>
         <p>Link: <a href="https://primarywalkinmedical.com/">https://primarywalkinmedical.com/</a></p>
-        <p>Reason: The webpage is the home page of a local urgent care center. It has lots of potential to improve, due to the usability and accessibility problems it has.</p>
+        <p>Why I choose this webpage: The webpage is the home page of a local urgent care center. It has lots of potential to improve, due to the usability and accessibility problems it has. The problems are explained further in following parts.</p>
         <p>Below is the screenshot of the webpage. The black header will stay on the top of screen no matter how we scroll down the webpage, so in the full-size screenshot below, it's near the bottom.</p>
-      </p>
 
       <div class="image-div">
-        <img class="origin" src="./assets/handin/origin-screenshot.png">
+        <img class="origin" src="./assets/handin/origin-screenshot.png" alt="screenshot of origin website">
       </div>
       <section>
         <h3>Usability Problems</h3>
@@ -46,7 +48,7 @@
             Learnability: All page links available for the website is listed in "Pages" section in right bottom corner of this page. Usually, the links are put in footer for reference. Location of this section makes it difficult for users to get used to. Also, with the headers in the top of webpage, the "Pages" section provides repetitive information and is not very important. It's better to put this in footer area of the webpage instead of put it in main body of the webpage.
           </li>
           <li>
-            Memorability, Learnability: Lack of icons in the page makes users difficult to remember different types of contact information. Users need to read all the text to find the information they want.
+            Memorability, Learnability: Lack of icons in the contact section makes users difficult to remember different types of contact information. Users need to read all the text to find the information they want.
           </li>
           <li>
             Understandability: The names of links in "Pages" section are confusing. For example, it makes no sense why "Primary laser skincare" and "Primary laser skincare pricing" are two separate links. "Primary laser skincare pricing" could be merged into "Primary laser skincare". Also, name of "Forms" link has only one word and does not provide more information about the forms. It can be removed as well, since it's already in the header.
@@ -73,32 +75,35 @@
           <h3>Sketches</h3>
           <h4>Speed sketches</h4>
           <div class="image-div">
-            <img class="sketch" src="./assets/handin/sketch1.jpg">
+            <img class="sketch" src="./assets/handin/sketch1.jpg" alt="speed sketch - crazy 9 redesigns">
           </div>
           <h4>Final Sketch</h4>
           <div class="image-div">
-            <img class="sketch" src="./assets/handin/sketch2.jpg">
+            <img class="sketch" src="./assets/handin/sketch2.jpg" alt="final sketch for redesign">
           </div>
         </section>
 
         <section>
           <h3>Low-Fidelity Wireframes</h3>
+          <p>
+            3 wireframes here: each for desktop, tablet, mobile screen size.
+          </p>
           <div>
             <h4>Desktop Screen</h4>
             <div class="image-div">
-              <img class="desktop" src="./assets/handin/lofi/lofi-desktop.jpg">
+              <img class="desktop" src="./assets/handin/lofi/lofi-desktop.jpg" alt="Low-Fidelity Wireframe - Desktop Screen">
             </div>
           </div>
           <div>
             <h4>Tablet Screen</h4>
             <div class="image-div">
-              <img class="tablet" src="./assets/handin/lofi/lofi-tablet.jpg">
+              <img class="tablet" src="./assets/handin/lofi/lofi-tablet.jpg" alt="Low-Fidelity Wireframe - Tablet Screen">
             </div>
           </div>
           <div>
             <h4>Mobile Screen</h4>
             <div class="image-div">
-              <img class="mobile-lofi" src="./assets/handin/lofi/lofi-mobile.jpg">
+              <img class="mobile-lofi" src="./assets/handin/lofi/lofi-mobile.jpg" alt="Low-Fidelity Wireframe - Mobile Screen">
             </div>
           </div>
         </section>
@@ -112,22 +117,25 @@
 
         <section>
           <h3>High-Fidelity Mockup</h3>
+          <p>
+            3 mockups here: each for desktop, tablet, mobile screen size.
+          </p>
           <div>
             <h4>Desktop Screen</h4>
             <div class="image-div">
-              <img class="desktop" src="./assets/handin/hifi/hifi-desktop.jpg">
+              <img class="desktop" src="./assets/handin/hifi/hifi-desktop.jpg" alt="High-Fidelity Mockup - Desktop Screen">
             </div>
           </div>
           <div>
             <h4>Tablet Screen</h4>
             <div class="image-div">
-              <img class="tablet" src="./assets/handin/hifi/hifi-tablet.jpg">
+              <img class="tablet" src="./assets/handin/hifi/hifi-tablet.jpg" alt="High-Fidelity Mockup - Tablet Screen">
             </div>
           </div>
           <div>
             <h4>Mobile Screen</h4>
             <div class="image-div">
-              <img class="mobile" src="./assets/handin/hifi/hifi-mobile.jpg">
+              <img class="mobile" src="./assets/handin/hifi/hifi-mobile.jpg" alt="High-Fidelity Mockup - Mobile Screen">
             </div>
           </div>
         </section>
@@ -140,13 +148,16 @@
       <h2>Part 3: Responsive Redesign</h2>
       <section>
         <p>Final Work Link: <a href="https://zhangyw18.github.io/cs1300_ass2/">Primary Walk-in Clinic</a></p>
+        <p>Code Link: <a href="https://github.com/ZhangYW18/cs1300_ass2">https://github.com/ZhangYW18/cs1300_ass2</a></p>
       </section>
     </section>
 
     <section>
-      <h2>Summary</h2>
+      <h2>A Surprising Finding</h2>
       <section>
-        <p>TODO</p>
+        <p>
+          During the assignment, I was surprised that most websites didn't take accessibility into account, especially those of small businesses. I analyzed some websites in Part 1 of the assignment, and many of them reflected errors through checks of WebAIM.
+        </p>
       </section>
     </section>
 
