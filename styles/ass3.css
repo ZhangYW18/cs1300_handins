@@ -1,0 +1,85 @@
+:root {
+    /* colors */
+    --theme-lightest: #FFF6F6;
+    --theme-light: #F8E3E3;
+    --theme-normal: #FFB1B1;
+    --theme-dark: #FF0205;
+    --footer-color: #182F82;
+    --link-color: #0000FF;
+    --hovered-link-color: #00008F;
+
+    /* font-weights */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --font-weight-extra-bold: 800;
+}
+
+#body {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5vw 5vw;
+    gap: 3vw;
+    background: var(--theme-lightest);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0 20px 0;
+}
+
+p {
+    width: 100%;
+    text-align: left;
+}
+
+ul {
+    display: flex;
+}
+
+section, ul {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+}
+
+img {
+    max-width: 90vw;
+}
+
+.image-div {
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+/*. {*/
+/*    !*width: 50vw;*!*/
+/*    width: 850px;*/
+/*}*/
+
+.hidden {
+    display: none;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+}
+
+@media (min-width: 888px) {
+    .result {
+        max-width: 800px;
+    }
+}
+

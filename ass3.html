@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A/B Testing - CS1300 Assignment 3</title>
+
+    <!-- Bootstrap Framework CSS -->
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="styles/ass3.css">
+  </head>
+
+  <!-- page content goes into <body> -->
+  <body id="body">
+    <h1>A/B Testing</h1>
+
+    <section>
+      <h2>Overview</h2>
+      <p>For a given web page, conduct A/B testing for it.</p>
+      <p>
+        If you're unfamiliar with A/B testing, it's a technique used to compare two versions of products or web pages:</p>
+      <ul>
+        <li>First, we make some changes to the webpage and form several hypotheses about the changes. </li>
+        <li>Then, users try both versions of the product simultaneously, while we measure specific statistics such as time spent on the page to gauge their experience. </li>
+        <li>Finally, we analyze these statistics to determine whether our hypotheses are correct.</li>
+      </ul>
+
+    </section>
+
+    <section>
+      <h2>A/B Testing Studio</h2>
+      <p>In the studio, I made several changes to the web page in the studio: </p>
+      <ul>
+        <li>The layout of appointments changed from rows to grids.</li>
+        <li>Button color changed from light blue to dark blue.</li>
+        <li>The order of appointments changed from unordered to ordered by time.</li>
+      </ul>
+
+      <div class="image-div">
+        <img class="screenshot" src="./assets/3/a.png" alt="">
+      </div>
+      <h5>Original Webpage (Version A)</h5>
+
+      <div class="image-div">
+        <img class="screenshot" src="./assets/3/b.png" alt="">
+      </div>
+      <h5>Changed Webpage (Version B)</h5>
+      <p></p>
+      <p>Users tried out the two versions of webpage in the studio. At the same time, we recorded some stats about their activities and exported those stats into .csv files.</p>
+      <p>
+        Task for each user: Schedule an appointment with Adam Ng, MD on Apr 23 2024 at Morristown Medical Center.
+      </p>
+    </section>
+
+    <section>
+      <h2>Hypotheses</h2>
+      <p>We need to make some hypotheses for users' metrics in the experiments. Null hypothesis is the hypothesis that we try to disapprove. Alternative hypothesis is the hypothesis that we try to approve and accept. Two metrics are already chosen according to project requirement: misclick rate and time on page. I need to choose one more.
+      </p>
+      <p>
+        Metric I choose: Mouse Moving Distance
+      </p>
+      <p>Here's the null/alternative hypothesis for each metric:</p>
+      <table>
+        <caption class="hidden"></caption>
+        <colgroup>
+          <col style="width: 20%;">
+          <col style="width: 40%;">
+          <col style="width: 40%;">
+        </colgroup>
+        <tr>
+          <th>Metric</th>
+          <th>Null Hypothesis</th>
+          <th>Alternative Hypothesis</th>
+        </tr>
+        <tr>
+          <td>Misclick Rate</td>
+          <td>The misclick rate of users on the "schedule appointment" button for a specific appointment is <b>the same</b> in version A as it is in version B.</td>
+          <td>The misclick rate of users on the "schedule appointment" button for a specific appointment is <b>different</b> in version A as it is in version B.</td>
+        </tr>
+        <tr>
+          <td>Time On Page</td>
+          <td>The time users spent on the Version A webpage to schedule a specific appointment is <b>shorter</b> than the time users spent on Version B to complete the same task.</td>
+          <td>The time users spent on the Version A webpage to schedule a specific appointment is <b>the same as or longer</b> than the time users spent on Version B to complete the same task.</td>
+        </tr>
+        <tr>
+          <td>Mouse Moving Distance</td>
+          <td>The mouse moving distance when a user schedule a specific appointment on version A webpage is <b>shorter</b> than that in version B.</td>
+          <td>The mouse moving distance when a user schedule a specific appointment on version A webpage is <b>equal to or longer</b> than that in version B.</td>
+        </tr>
+      </table>
+      <p></p>
+      <p>For the null hypotheses, I made some predictions about whether they will be rejected and listed why I predicted like that. For alternative hypothesis, if we predict "reject" for null hypothesis, then the reasoning for alternative hypothesis is the same as the reasoning for null hypothesis predictions. Here's the predictions and analysis:</p>
+      <p></p>
+      <table>
+        <caption class="hidden"></caption>
+        <colgroup>
+          <col style="width: 10%;">
+          <col style="width: 15%;">
+          <col style="width: 55%;">
+          <col style="width: 20%;">
+        </colgroup>
+        <tr>
+          <th>Metric</th>
+          <th>Prediction to Null Hypothesis (Reject / Failing to Reject)</th>
+          <th>Reasoning for Null Hypothesis Prediction</th>
+          <th>Reasoning for Alternative Hypothesis</th>
+        </tr>
+        <tr>
+          <td>Misclick Rate</td>
+          <td>Reject</td>
+          <td>The background color of buttons changed to dark blue in version B, so the white text on the button is clearer to see and the users can distinguish the text on the 2 buttons ("See Appointment" or "Schedule Appointment") more easily, resulting in possibly lower misclick rate in version B.</td>
+          <td>Same as left</td>
+        </tr>
+        <tr>
+          <td>Time On Page</td>
+          <td>Reject</td>
+          <td>Appointments are laid out in grids instead of in rows in version B. In version A, appointment info are listed on the left side of screen, which makes it harder for users to find a specific appointment. Also, in version B, the appointments are sorted according to time. Buttons are easier to find due to background color change. Thus, it might take more time for users to stay on page in version A.</td>
+          <td>Same as left</td>
+        </tr>
+        <tr>
+          <td>Mouse Moving Distance</td>
+          <td>Reject</td>
+          <td>In version B, the appointment that users need to reserve (Apr 23 2024, Adam Ng, Morristown Medical Center) is located in the center of screen. But in version A, the row for that appointment is at the bottom of the web page. Thus the mouse moving distance would possibly be longer on version A webpage.</td>
+          <td>Same as left</td>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Test Results</h2>
+      <p>References of this part:</p>
+      <ul>
+        <li><a href="https://statisticsbyjim.com/hypothesis-testing/t-distribution-table/">T-Distribution Table of Critical Values</a></li>
+        <li><a href="https://www.scribbr.com/statistics/chi-square-distribution-table/">Chi-Square Distribution Table</a></li>
+      </ul>
+      <section>
+        <h3>Misclick Rate</h3>
+        <p>
+          I chose the <b>chi-squared test</b> because we want to determine whether the change in layout would affect the frequency of misclicks for users. This test is appropriate for analyzing categorical data, making it suitable for our purpose.
+        </p>
+        <p>
+          The original data collected for each user is a boolean value <i>did_misclick</i>:
+        </p>
+        <div class="image-div">
+          <img class="result" src="assets/3/result1-0.png" alt="">
+        </div>
+        <p>
+          I count the number of occurences for true/false and fill out the following table:
+        </p>
+        <div class="image-div">
+          <img class="result" src="assets/3/result1.png" alt="">
+        </div>
+        <p>
+          The difference between 2 versions is not statistically significant.
+        </p>
+        <ul>
+          <li>
+            p-value is 0.13, bigger than 0.05 (5%) threshold. Thus, the difference between 2 versions is not statistically significant.
+          </li>
+          <li>
+            df=1 indicates that there's only one group of A/B experiment data in our test.
+          </li>
+          <li>
+            chi^2 (2.25), represents the magnitude of the difference, is smaller when compared to critical value of df=1, alpha=0.05 (3.841), meaning no big differences between 2 groups.
+          </li>
+          <li>
+            The expected values for sample A (21 users in total) and B (20 users in total) are very close to each other: each sample is expected to have 4 people who do misclick.
+          </li>
+        </ul>
+        <p>
+          Conclusion: We <b>fail to reject</b> the null hypothesis for misclick rate.
+        </p>
+      </section>
+
+      <section>
+        <h3>Time On Page</h3>
+        <p>
+          I chose the <b>one-tailed test</b> because we want to determine whether the change in layout would reduce the time users spent on page. This test is appropriate for analyzing continuous data (time) and verifying the change of data in one direction (increase or decrease), making it suitable for our purpose. Here's the results:
+        </p>
+        <div class="image-div">
+          <img class="result" src="assets/3/result2.png" alt="">
+        </div>
+        <p>
+          The difference between the two versions is statistically significant.
+        </p>
+        <ul>
+          <li>
+            P-value (A < B) is almost 1, meaning that p-value(A >= B) is almost equal to 0, which is well below the typical threshold of 0.05 (5%). Thus, the difference between the two versions is statistically significant.
+          </li>
+          <li>
+            The average value of the data on the Version B webpage is significantly lower than that for Version A (8,450 vs 24,398), indicating that the time users spent on webpage when using Version B is significantly lower.
+          </li>
+          <li>
+            The variance of the data on the Version B webpage are significantly lower than those for Version A (5,583,018 vs 206,407,623), indicating that the time data users spent on Version B webpage is much less fluctuated.
+          </li>
+          <li>
+            The degrees of freedom indicate that there are approximately 21 users in each group in our experiment.
+          </li>
+          <li>
+            The t-score (5.01) is much larger than the critical value for df=21,alpha=0.05 (1.721), indicating that the magnitude of difference between the two groups' data is substantial.
+          </li>
+        </ul>
+        <p>
+          Conclusion: We <b>reject</b> the null hypothesis for time on page.
+        </p>
+      </section>
+
+      <section>
+        <h3>Mouse Moving Distance</h3>
+        <p>
+          I chose the <b>one-tailed test</b> because we want to determine whether the change in layout would reduce the mouse-moving distance for users. This test is appropriate for analyzing continuous data (distance) and verifying the change of data in one direction (increase or decrease), making it suitable for our purpose. Here's the results:
+        </p>
+        <div class="image-div">
+          <img class="result" src="assets/3/result3.png" alt="">
+        </div>
+        <p>
+          The difference between the two versions is statistically significant.
+        </p>
+        <ul>
+          <li>P-value (A < B) is almost 1, meaning that p-value(A >= B) is almost equal to 0, which is well below the typical threshold of 0.05 (5%). Thus, The difference between the two versions is statistically significant.</li>
+          <li>The average value of the data on the Version B webpage are significantly lower than those for Version A (1,576 vs 7,087), indicating that the mouse-moving distance for users using Version B is lower.</li>
+          <li>The variance of the data on the Version B webpage are significantly lower than those for Version A (326,811 vs 17,163,866), indicating that the mouse-moving distance data for users using Version B is much less fluctuated.</li>
+          <li>The degrees of freedom (20.79) indicate that there are approximately 21 users in each group in our experiment.</li>
+          <li>The t-score (6.03) is much larger than the critical value for df=21, alpha=0.05 (1.721), indicating that the magnitude of difference between the two groups' data is substantial.</li>
+        </ul>
+        <p>
+          Conclusion: We <b>reject</b> the null hypothesis for mouse moving distance.
+        </p>
+      </section>
+    </section>
+
+    <section>
+      <h2>Summary of Experiment Data</h2>
+
+      <p>The original data collected is like this:</p>
+
+      <div class="image-div">
+        <img class="origin-data" src="assets/3/data-a.png" alt="">
+      </div>
+      <p></p>
+      <h5>Original Data for Version A Webpage</h5>
+      <p></p>
+
+      <div class="image-div">
+        <img class="origin-data" src="assets/3/data-b.png" alt="">
+      </div>
+      <p></p>
+      <h5>Original Data for Version B Webpage</h5>
+      <p></p>
+
+      <p>
+        From the data above, I've got the following observations:
+      </p>
+      <ul>
+        <li>
+          There's 2 rows in sample A that should be considered invalid (uid=385200 and uid=99931). Some data for those 2 rows are just 0 or empty and the time user stay on weboage is very very short, indicating that those 2 rows are broken data.
+        </li>
+        <li>
+          Mode value for <i>num_clicks</i> is 2 for both groups, indicating most users won't do misclicks despite the UI was in version A or B.
+        </li>
+        <li>
+          Average value for <i>time_to_first_click</i> is 12,217 vs 5,448 for group A and B, implying that users using version A spent more time to get to know the components of UI before making their decision to click in the beginning of test.
+        </li>
+      </ul>
+
+
+    </section>
+
+  </body>
+
+  <!-- Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</html>
