@@ -95,9 +95,9 @@
         <caption class="hidden"></caption>
         <colgroup>
           <col style="width: 10%;">
-          <col style="width: 15%;">
-          <col style="width: 55%;">
-          <col style="width: 20%;">
+          <col style="width: 10%;">
+          <col style="width: 40%;">
+          <col style="width: 40%;">
         </colgroup>
         <tr>
           <th>Metric</th>
@@ -108,20 +108,20 @@
         <tr>
           <td>Misclick Rate</td>
           <td>Reject</td>
+          <td>The changes in the color of buttons will have a great positive impact for users to click the "Schedule Appointment" button accurately. We expect that <i>did_misclick</i> would be "FALSE" for almost all users in version B. However, for users in group A, we expect that only less than half of all users would have <i>did_misclick</i> field as "FALSE". </td>
           <td>The background color of buttons changed to dark blue in version B, so the white text on the button is clearer to see and the users can distinguish the text on the 2 buttons ("See Appointment" or "Schedule Appointment") more easily, resulting in possibly lower misclick rate in version B.</td>
-          <td>Same as left</td>
         </tr>
         <tr>
           <td>Time On Page</td>
           <td>Reject</td>
+          <td>The average value of <i>time_on_page</i> is expected to be lower for version B. We expect users would spend significantly shorter time finding the appointment that they want, due to the changes in layout of appointments as well as the different order of available appointments in version A/B.</td>
           <td>Appointments are laid out in grids instead of in rows in version B. In version A, appointment info are listed on the left side of screen, which makes it harder for users to find a specific appointment. Also, in version B, the appointments are sorted according to time. Buttons are easier to find due to background color change. Thus, it might take more time for users to stay on page in version A.</td>
-          <td>Same as left</td>
         </tr>
         <tr>
           <td>Mouse Moving Distance</td>
           <td>Reject</td>
+          <td>The average value of <i>mouse_move_distance</i> would be significantly lower for version B, as we expect users would move the mouse significantly less due to the difference in the locations of "Schedule Appointment" buttons that users need to click.</td>
           <td>In version B, the appointment that users need to reserve (Apr 23 2024, Adam Ng, Morristown Medical Center) is located in the center of screen. But in version A, the row for that appointment is at the bottom of the web page. Thus the mouse moving distance would possibly be longer on version A webpage.</td>
-          <td>Same as left</td>
         </tr>
       </table>
     </section>
@@ -261,6 +261,14 @@
         <li>
           Average value for <i>time_to_first_click</i> is 12,217 vs 5,448 for group A and B, implying that users using version A spent more time to get to know the components of UI before making their decision to click in the beginning of test.
         </li>
+        <li>
+          The average value of the data on the Version B webpage is significantly lower than that for Version A (8,450 vs 24,398), indicating that the time users spent on webpage when using Version B is significantly lower.
+        </li>
+        <li>
+          The variance of the data on the Version B webpage are significantly lower than those for Version A (5,583,018 vs 206,407,623), indicating that the time data users spent on Version B webpage is much less fluctuated.
+        </li>
+        <li>The average value of the data on the Version B webpage are significantly lower than those for Version A (1,576 vs 7,087), indicating that the mouse-moving distance for users using Version B is lower.</li>
+        <li>The variance of the data on the Version B webpage are significantly lower than those for Version A (326,811 vs 17,163,866), indicating that the mouse-moving distance data for users using Version B is much less fluctuated.</li>
       </ul>
 
 

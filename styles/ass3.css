@@ -83,3 +83,9 @@ table th, table td {
     }
 }
 
+@media (min-width: 1000px) {
+    .origin-data {
+        max-width: 900px;
+    }
+}
+
