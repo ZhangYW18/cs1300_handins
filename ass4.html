@@ -192,20 +192,23 @@
       <h2>Implementation</h2>
       <h3>Overview</h3>
       <p>The intention of my app is to serve as an album library page in a music streaming service, so that users could choose albums to favorite or remove albums from favorites. Also, users could filter ot sort albums in the library. </p>
-      <p>Link to Completed Work: <a href="https://cs1300-ass4.vercel.app/">https://cs1300-ass4.vercel.app/</a></p>
+      <p>The page have a title "My Albums". The albums are shown in the left part of the page under the title, taking up most space of the page. Other features like filtering, sorting, aggregator are put in the right part of the page. Depending on the genres of albums, we'll collect genre tags for users to filter. Users can also filter albums by set the release time range. We provide three sorting keys for albums: title, artist, year.</p>
+      <h3>Implementation Plan</h3>
+      <p>To complete the web page, I decided to write components in React firstly: AlbumLib, AlbumCard, FilterButton. Then, in main js file, I combine the components, update the states and variables dynamically when users click a button, pass the new states as props to children components and thus modify the page.</p>
+      <p>
+        For sorting, we firstly sort them by the key that user chooses. Then to solve ties, we use other keys in the following order: artist, title, year, after removing the key user choose from this list.
+      </p>
+      <h3>Completed Work</h3>
+      <p>Link: <a href="https://cs1300-ass4.vercel.app/">https://cs1300-ass4.vercel.app/</a></p>
       <div class="row-li">
         <img src="assets/4/app-screenshot.png" style="width: 1200px" alt="my website's screenshot">
       </div>
-      <p>The albums are shown in the left part of the page under the title "My Albums". Other features like filtering, sorting, aggregator are put in the right part of the page. Depending on the genres of albums, we'll collect genre tags for users to filter. Users can also filter albums by set the release time range. We provide three sorting keys for albums: title, artist, year.</p>
       <p>
-        For sorting, we firstly sort them by the key user choose. Then to solve ties, we use other keys in the following order: artist, title, year, after removing the key user choose from this list.
+        When there's only one row displaying albums, we place all albums evenly in that row like the below screenshot.
       </p>
       <div class="row-li">
         <img src="assets/4/app-screenshot2.png" style="width: 1200px" alt="my website's screenshot, with 3 albums in a row">
       </div>
-      <p>
-        When there's only one row displaying albums, we place all albums evenly in that row like the above screenshot.
-      </p>
     </section>
 
     <section>
