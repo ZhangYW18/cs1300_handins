@@ -15,8 +15,9 @@
     <h1>Development</h1>
 
     <section>
-      <h2>Overview</h2>
-      <p></p>
+      <h2>Project Overview</h2>
+      <p>Select websites with a favorite feature, compare them in competitive analysis, then develop a web page with favorite, filter, sorting feature on our own.</p>
+      <p>Final Work Link: <a href="https://cs1300-ass4.vercel.app/">https://cs1300-ass4.vercel.app/</a> </p>
     </section>
 
     <section>
@@ -24,23 +25,34 @@
       <p>
         I selected 3 music streaming websites, and compared their favorite (playlist) feature:
       </p>
-      <ul>
-        <li>
-          <a href="https://open.spotify.com/">Spotify</a>
-          <hr>
-          <img src="assets/4/spotify.png" alt="">
-        </li>
-        <li>
-          <a href="https://music.apple.com/us/home?l=en-US">Apple Music</a>
-          <hr>
-          <img src="assets/4/apple.png" alt="">
-        </li>
-        <li>
-          <a href="https://music.amazon.com/my/playlists">Amazon Music</a>
-          <hr>
-          <img src="assets/4/amazon.png" alt="">
-        </li>
-      </ul>
+
+      <div>
+        <h3><a href="https://open.spotify.com/">Spotify</a></h3>
+        <h6>Link: <a href="https://open.spotify.com/">https://open.spotify.com/</a></h6>
+        <hr>
+        <div class="row-li">
+          <img src="assets/4/spotify.png" style="width: 800px" alt="spotify screenshot">
+        </div>
+      </div>
+
+      <div>
+        <h3><a href="https://music.apple.com/us/home?l=en-US">Apple Music</a></h3>
+        <h6>Link: <a href="https://music.apple.com/us/home?l=en-US">https://music.apple.com/us/home?l=en-US</a></h6>
+        <hr>
+        <div class="row-li">
+          <img src="assets/4/apple.png" style="width: 800px" alt="apple music screenshot">
+        </div>
+      </div>
+
+      <div>
+        <h3><a href="https://music.amazon.com/my/playlists">Amazon Music</a></h3>
+        <h6>Link: <a href="https://music.amazon.com/my/playlists">https://music.amazon.com/my/playlists</a></h6>
+        <hr>
+        <div class="row-li">
+          <img src="assets/4/amazon.png" style="width: 800px" alt="amazon music screenshot">
+        </div>
+      </div>
+
 
       <p>Please note that this chart only compares the web version of the apps only. Some features are available on apps, but we do not count them in.</p>
       <div class="middle" style="width: 100%">
@@ -115,58 +127,90 @@
 
       <h3>Analysis for Each Service</h3>
 
-      <p class="bigger-text">
-        Spotify:
-      </p>
+      <h4 class="bigger-text">
+        Spotify
+      </h4>
       <div class="row-li">
-          <img src="assets/4/spotify-playlist.png" style="width: 300px" alt="">
-          <img src="assets/4/spotify-add-to-lists.png" style="width: 200px" alt="">
+          <img src="assets/4/spotify-playlist.png" style="width: 300px" alt="spotify playlist screenshot">
+          <img src="assets/4/spotify-add-to-lists.png" style="width: 200px" alt="spotify screenshot when adding a song to multiple lists">
       </div>
       <hr>
       <p>Most successful point: Spotify implemented rich features that other streaming service does not have. The playlists can be sorted in multiple orders and viewed in multiple visual modes, and it's very easy for users to utilize - just click the button in the top right corner of library, then select the action, and it's done. It's also possible to add a song to multiple playlists at one time. Those features greatly increases the usability of the website.</p>
       <hr>
       <p>Least successful point: Playlists cannot be directly shared on social media like Facebook and Twitter, which makes it harder for users to share their taste in music.</p>
 
-      <p class="bigger-text">
-        Apple Music:
-      </p>
+      <h4 class="bigger-text">
+        Apple Music
+      </h4>
       <div class="row-li">
-        <img src="assets/4/apple-menu.png" style="width: 500px" alt="">
+        <img src="assets/4/apple-menu.png" style="width: 500px" alt="apple menu for a playlist screenshot">
       </div>
       <hr>
       <p>Most successful point: Use of icons is everywhere for every feature that is implemented for playlist, which is good for learnability and usability. For example, in the menu above for a playlist, there's one icon for almost each choice in the menu, making it easier for users to learn what each choice is about and distinguish between similar choices (Play Next vs Play Later).</p>
       <hr>
       <div class="row-li">
-        <img src="assets/4/apple-playlists.png" style="width: 200px" alt="">
+        <img src="assets/4/apple-playlists.png" style="width: 200px" alt="apple playlist screenshot">
       </div>
       <hr>
       <p>Least successful point: The least successful point is related to filter and sorting. Playlists cannot be filtered or sorted by users, showing low operability of the website. Playlists can only be sorted in default order by name, but result is wrong when names containing multiple languages. For example, in the above screenshot, last playlist is named "Tamayura" in Japanese but sorted to the last. This shows its disadvantages in terms of accessibility for multiple languages.</p>
 
-      <p class="bigger-text">
-        Amazon Music:
-      </p>
+      <h4 class="bigger-text">
+        Amazon Music
+      </h4>
       <hr>
       <p>Most successful point: They are the only website out of all 3 websites that can recommend songs based on your playlist. This allows more detailed personalized recommendation based on different playlist instead of based on songs listened by a user generally.</p>
       <hr>
       <div class="row-li">
-        <img src="assets/4/amazon.png" style="width: 800px" alt="">
+        <img src="assets/4/amazon.png" style="width: 800px" alt="amazon music screenshot for playlist page">
       </div>
       <hr>
       <p>Least successful point: The website is visually monotonous and lacks attractiveness. All playlists are laid out in grids, with their cover being one or some of the covers of the songs in playlist. With few playlists created, the right part of the screen is completely empty below the header.</p>
 
       <h3>Inspiration for My Project</h3>
-      <p>Based on the analysis above, I have a list of features that I want to implement for my project:</p>
-
+      <p>Based on the analysis above, I have a list of features that I want to implement for my app:</p>
       <ul>
         <li>
-          TODO
+          My app is an album favorite page, where all albums are listed, and users can choose which to favorite.
+        </li>
+        <li>
+          Each album has a cover image, a title, an artist, a genre and a release year.
+        </li>
+        <li>
+          Albums can be filtered by genre or time.
+        </li>
+        <li>
+          Inspired by Apple Music's shortcoming, I decide to include sorting feature for albums in my app. Sorting key can be the title, artist or release year of the albums.
+        </li>
+        <li>
+          Inspired by Amazon Music's shortcoming, I decide to let the albums be spaced evenly in one row when there are only one row displaying albums in total.
         </li>
       </ul>
 
     </section>
 
     <section>
-      <h2>Overview for My Project</h2>
+      <h2>Implementation</h2>
+      <h3>Overview</h3>
+      <p>The intention of my app is to serve as an album library page in a music streaming service, so that users could choose albums to favorite or remove albums from favorites. Also, users could filter ot sort albums in the library. </p>
+      <p>Link to Completed Work: <a href="https://cs1300-ass4.vercel.app/">https://cs1300-ass4.vercel.app/</a></p>
+      <div class="row-li">
+        <img src="assets/4/app-screenshot.png" style="width: 1200px" alt="my website's screenshot">
+      </div>
+      <p>The albums are shown in the left part of the page under the title "My Albums". Other features like filtering, sorting, aggregator are put in the right part of the page. Depending on the genres of albums, we'll collect genre tags for users to filter. Users can also filter albums by set the release time range. We provide three sorting keys for albums: title, artist, year.</p>
+      <p>
+        For sorting, we firstly sort them by the key user choose. Then to solve ties, we use other keys in the following order: artist, title, year, after removing the key user choose from this list.
+      </p>
+      <div class="row-li">
+        <img src="assets/4/app-screenshot2.png" style="width: 1200px" alt="my website's screenshot, with 3 albums in a row">
+      </div>
+      <p>
+        When there's only one row displaying albums, we place all albums evenly in that row like the above screenshot.
+      </p>
+    </section>
+
+    <section>
+      <h2>Interesting Lessons Learned</h2>
+      <p>From this project, I learned that many companies prioritize their app versions over their web counterparts, and provide richer features on apps. Possibly the intention is to encourage users to download their app rather than using the web version. This could also be due to the relatively small user base on the web version.</p>
     </section>
 
   </body>

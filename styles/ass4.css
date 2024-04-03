@@ -99,6 +99,7 @@ hr{
     justify-content: center;
     align-items: center;
     gap: 50px;
+    margin-bottom: 20px;
 }
 
 .bigger-text {
