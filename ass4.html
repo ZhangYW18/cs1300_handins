@@ -197,6 +197,7 @@
       <p>To complete the web page, I decided to write components in React firstly: AlbumLib, AlbumCard, FilterButton. Then, in main js file, I combine the components, update the states and variables dynamically when users click a button, pass the new states as props to children components and thus modify the page.</p>
       <p>
         For sorting, we firstly sort them by the key that user chooses. Then to solve ties, we use other keys in the following order: artist, title, year, after removing the key user choose from this list.
+        For filtering, we add a boolean field "filtered" for every album, and update this field every time filter condition is changed.
       </p>
       <h3>Completed Work</h3>
       <p>Link: <a href="https://cs1300-ass4.vercel.app/">https://cs1300-ass4.vercel.app/</a></p>
